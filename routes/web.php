@@ -13,12 +13,21 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/blog', function () {
-    return view('blog', [
-        'judul' => 'angka kelahiran jepang menurun',
-        'isi' => '
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptatibus eligendi enim vitae hic suscipit quod reprehenderit minima modi voluptatem cupiditate consectetur deleniti accusamus nulla magni sequi tempore, similique iure?',
-        'title' => 'Blog',
+Route::get('/posts', function () {
+    return view('posts', [
+        'title' => 'posts',
+        'posts' => [
+            [
+                'title' => 'judul 1',
+                'author' => 'muharromi',
+                'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus porro architecto repellendus quas cumque blanditiis vero odio similique itaque ab minima laborum neque nisi ducimus, excepturi tempora sunt amet placeat!'
+            ],
+            [
+                'title' => 'judul 2',
+                'author' => 'Ardhana',
+                'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quasi est maiores amet accusantium nemo tenetur numquam facilis quia illo laboriosam quae qui, excepturi, veniam quis officiis earum harum pariatur!'
+            ],
+        ]
     ]);
 });
 
