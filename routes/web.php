@@ -18,17 +18,23 @@ Route::get('/posts', function () {
         'title' => 'posts',
         'posts' => [
             [
+                'id' => 1,
                 'title' => 'judul 1',
                 'author' => 'muharromi',
                 'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus porro architecto repellendus quas cumque blanditiis vero odio similique itaque ab minima laborum neque nisi ducimus, excepturi tempora sunt amet placeat!'
             ],
             [
+                'id' => 2,
                 'title' => 'judul 2',
                 'author' => 'Ardhana',
                 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quasi est maiores amet accusantium nemo tenetur numquam facilis quia illo laboriosam quae qui, excepturi, veniam quis officiis earum harum pariatur!'
             ],
         ]
     ]);
+});
+
+Route::get('/posts/{id}', function ($id) {
+    dd($id);
 });
 
 Route::get('/contact', function () {
