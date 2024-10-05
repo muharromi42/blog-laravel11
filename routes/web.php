@@ -22,9 +22,8 @@ Route::get('/posts', function () {
     ]);
 });
 
-Route::get('/posts/{id}', function ($slug) {
-
-    $post = Post::find($slug);
+// teknik route model binding supaya bisa find berdasarkan slug
+Route::get('/posts/{post:slug}', function (Post $post) {
 
     return view('post', ['title' => 'Single Post', 'post' => $post]);
 });
