@@ -10,7 +10,6 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return view('about', [
-        'nama' => 'romay',
         'title' => 'About',
     ]);
 });
@@ -30,8 +29,6 @@ Route::get('/posts/{post:slug}', function (Post $post) {
 
 Route::get('/contact', function () {
     return view('contact', [
-        'nama' => 'romay',
-        'email' => 'muharromi42@gmail.com',
         'title' => 'Contact',
     ]);
 });
